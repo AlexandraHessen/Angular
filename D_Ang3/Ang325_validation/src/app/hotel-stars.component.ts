@@ -16,13 +16,3 @@ export class HotelStarsComponent {
   }
 
 }
-
-
-import { Directive } from "@angular/core";
-
-@Directive({
-  selector: "[атрибут]",
-})
-class имяклассадирективы {
-
-}
