@@ -22,6 +22,8 @@ export class HotelComponent implements OnInit {
 
   private logger:LoggerService;
 
+
+  //объявили зависимость через коструктор
   constructor(_logger:LoggerService) {
     this.logger=_logger;
     //когда Angular будет строить компанент он в констрктор должен будет передаст logger
