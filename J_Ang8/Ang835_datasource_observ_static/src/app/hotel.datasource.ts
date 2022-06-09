@@ -11,8 +11,8 @@ export class HotelDatasource {
     photo:"http://fe.it-academy.by/Examples/Hotel/hotel1.jpg"
   }
 
-  getObservable():Observable<IHotelInfo> {
-    return Observable.from([this.data]);
+  getObservable():Observable<IHotelInfo> { //поток информации об отеле
+    return Observable.from([this.data]); // в этот поток выпускаем единственный элемент текущую информацию об отеле
   }
 
 }

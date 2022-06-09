@@ -14,7 +14,7 @@ export class HotelComponent {
   hotelInfo:IHotelInfo=null;
 
   constructor(private datasource:HotelDatasource) {
-    datasource.getObservable().subscribe((info)=>{
+    datasource.getObservable().subscribe((info)=>{ //подпишется на метод
       console.log(info);
       this.hotelInfo=info;
     });
