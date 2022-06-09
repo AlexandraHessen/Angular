@@ -17,24 +17,24 @@ export class HotelComponent implements OnInit {
 
   private photo:string="http://fe.it-academy.by/Examples/Hotel/hotel1.jpg";
 
-  constructor(private http1:HttpClient, 
+  constructor(private http1:HttpClient,
     private http2:HttpClient) {
   }
 
   ngOnInit() {
     this.http1
       .get('http://fe.it-academy.by/Examples/Hotel/rooms.json')
-      .subscribe( (data)=>{ 
-        console.log(data); 
+      .subscribe( (data)=>{ //data - уже разпарсенный массив, т.е.переведенный из json в обычный массив
+        console.log(data);
         this.rooms
           =<Array<{num:number,beds:number}>>data;
       } )
       ;
     this.http2
-      .get('http://fe.it-academy.by/Examples/Hotel/slogan.txt', 
-        {responseType: 'text'})
-      .subscribe( (data)=>{ 
-        console.log(data); 
+      .get('http://fe.it-academy.by/Examples/Hotel/slogan.txt',
+        {responseType: 'text'}) //чтобы сразу перевел в строку из json
+      .subscribe( (data)=>{
+        console.log(data);
         this.slogan=data;
       } )
       ;
