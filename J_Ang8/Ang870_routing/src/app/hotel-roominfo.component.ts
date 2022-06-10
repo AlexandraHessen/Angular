@@ -7,7 +7,7 @@ import { HotelDatasource } from './hotel.datasource';
   moduleId: module.id,
   selector: 'hotel',
   templateUrl: 'hotel-roominfo.component.html',
-  styleUrls: ['hotel-roominfo.component.css']
+  styleUrls: ['hotel-roominfo.component.css']р
 })
 export class HotelRoomInfoComponent {
 
@@ -18,8 +18,8 @@ export class HotelRoomInfoComponent {
     activeRoute: ActivatedRoute) {
     this.roomNum=parseInt(
       activeRoute.snapshot.params['num']);
-    this.room=datasource.getRooms()
-      .filter(room=>(room.num==this.roomNum))[0];
+    this.room=datasource.getRooms() // список всех комнат
+      .filter(room=>(room.num==this.roomNum))[0]; // оставляем только нужную комнату
   }
 
   getNum():number {

@@ -18,14 +18,14 @@ const appRoutes: Routes =[
     { path: 'rooms', component: HotelRoomsComponent},
     { path: 'room/:num', component: HotelRoomInfoComponent},
     // для всех остальных URL-ов:
-    { path: '**', redirectTo: '/' }
+    { path: '**', redirectTo: '/' } // ** означает что если ни один из описанных выше урлов не подошел отработает этот
 ];
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule, 
+  imports: [ BrowserModule, FormsModule,
     RouterModule.forRoot(appRoutes) ],
   declarations: [
-    HotelComponent, HotelTitleComponent, 
+    HotelComponent, HotelTitleComponent,
     HotelPhotoComponent, HotelRoomInfoComponent,
     HotelRoomsComponent, HotelRoomComponent,
     HotelLinksComponent,
