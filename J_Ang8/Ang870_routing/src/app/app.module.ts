@@ -14,9 +14,9 @@ import { HotelDatasource } from './hotel.datasource';
 
 // определяем маршруты
 const appRoutes: Routes =[
-    { path: '', component: HotelPhotoComponent},
+    { path: '', component: HotelPhotoComponent}, //http://localhost:4200/
     { path: 'rooms', component: HotelRoomsComponent},
-    { path: 'room/:num', component: HotelRoomInfoComponent},
+    { path: 'room/:num', component: HotelRoomInfoComponent}, //num переменая, которая будет указывать номер комнаты
     // для всех остальных URL-ов:
     { path: '**', redirectTo: '/' } // ** означает что если ни один из описанных выше урлов не подошел отработает этот
 ];
