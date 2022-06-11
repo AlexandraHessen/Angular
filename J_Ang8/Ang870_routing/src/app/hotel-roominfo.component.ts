@@ -22,6 +22,8 @@ export class HotelRoomInfoComponent {
       .filter(room=>(room.num==this.roomNum))[0]; // оставляем только нужную комнату
   }
 
+  //6.	в компоненте получить все параметры роута можно через сервис ActivatedRoute
+
   getNum():number {
     return this.roomNum;
   }
