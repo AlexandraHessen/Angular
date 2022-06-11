@@ -21,6 +21,8 @@ const appRoutes: Routes =[
     { path: '**', redirectTo: '/' } // ** означает что если ни один из описанных выше урлов не подошел отработает этот
 ];
 
+// ** чтобы не было конфликтов следует всегда сначала располагать наиболее точные маршруты(/info2), а потом более абстрактные(/info). Angular отработает первую же строчку, которая подойдет .
+
 @NgModule({
   imports: [ BrowserModule, FormsModule,
     RouterModule.forRoot(appRoutes) ],
