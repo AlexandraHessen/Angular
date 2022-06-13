@@ -24,15 +24,22 @@ const appRoutes: Routes =[
 // ** чтобы не было конфликтов следует всегда сначала располагать наиболее точные маршруты(/info2), а потом более абстрактные(/info). Angular отработает первую же строчку, которая подойдет .
 
 @NgModule({
+  // импортируем другие модули
   imports: [ BrowserModule, FormsModule,
     RouterModule.forRoot(appRoutes) ],
+
+  //регистрируем различные сущности (компоненты, директивы, пайпы)
   declarations: [
     HotelComponent, HotelTitleComponent,
     HotelPhotoComponent, HotelRoomInfoComponent,
     HotelRoomsComponent, HotelRoomComponent,
     HotelLinksComponent,
   ],
+
+  //регистрируем сервисы
   providers: [ HotelDatasource ],
+
+  //только для главного модуля, передаем компонент, который является главным для нашего приложения 
   bootstrap: [ HotelComponent ]
 })
 export class AppModule { }
