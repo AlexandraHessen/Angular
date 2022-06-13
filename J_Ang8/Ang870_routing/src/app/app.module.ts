@@ -43,6 +43,6 @@ const appRoutes: Routes =[
   bootstrap: [ HotelComponent ],
 
   //указываем что именно экспорируем в публичный доступ, т.к. по умолчанию все приватно
-  exports: [RouterModule.forRoot(appRoutes)]
+  // exports: [RouterModule.forRoot(appRoutes)]
 })
 export class AppModule { }
