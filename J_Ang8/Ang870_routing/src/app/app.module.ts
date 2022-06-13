@@ -39,7 +39,10 @@ const appRoutes: Routes =[
   //регистрируем сервисы
   providers: [ HotelDatasource ],
 
-  //только для главного модуля, передаем компонент, который является главным для нашего приложения 
-  bootstrap: [ HotelComponent ]
+  //только для главного модуля, передаем компонент, который является главным для нашего приложения
+  bootstrap: [ HotelComponent ],
+
+  //указываем что именно экспорируем в публичный доступ, т.к. по умолчанию все приватно
+  exports: [RouterModule.forRoot(appRoutes)]
 })
 export class AppModule { }
