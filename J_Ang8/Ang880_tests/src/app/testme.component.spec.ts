@@ -5,12 +5,15 @@ import { TestMeComponent } from './testme.component';
 describe('тестируем TestMeComponent: ', () => {
 
   // перед каждым тестом (т.е. перед каждым it ) конфигурируем тестовый модуль
+  //т.е. не app module ts будет использоваться а наш модуль
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      //говорим какие компоненты и  сервисы нам нужны
       declarations: [
         TestMeComponent
       ],
     }).compileComponents();
+    //compileComponents- пото конфигурируем эти компоненты
   }));
 
   it('компонент должен успешно создаваться', async(() => { // внимание - здесь async это имя функции, а не ключевое слово JS
