@@ -32,7 +32,7 @@ describe('тестируем TestMeComponent: ', () => {
   it('свойство title должно быть привязано к содержимому тега h1', async(() => {
     const fixture = TestBed.createComponent(TestMeComponent);
     fixture.detectChanges(); // чтобы привязки обновились
-    const compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.debugElement.nativeElement; //DOM элемент всего компонента!!!
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to testing app!');
   }));
 
