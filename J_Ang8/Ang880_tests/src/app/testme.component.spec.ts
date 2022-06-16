@@ -13,9 +13,10 @@ describe('тестируем TestMeComponent: ', () => {
         TestMeComponent
       ],
     }).compileComponents();
-    //compileComponents- пото конфигурируем эти компоненты
+    //compileComponents- потом конфигурируем эти компоненты
   }));
 
+  //перед каждым it отрабатывает beforeEach
   it('компонент должен успешно создаваться', async(() => { // внимание - здесь async это имя функции, а не ключевое слово JS
     const fixture = TestBed.createComponent(TestMeComponent);
     const app = fixture.debugElement.componentInstance;
