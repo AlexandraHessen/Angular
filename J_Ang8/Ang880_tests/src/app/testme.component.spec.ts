@@ -1,9 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
 import { TestMeComponent } from './testme.component';
 
+// describe - оборачивает набор тестов, в него записываем все что мы тестируем
 describe('тестируем TestMeComponent: ', () => {
 
-  // перед каждым тестом (вызов it) конфигурируем тестовый модуль
+  // перед каждым тестом (т.е. перед каждым it ) конфигурируем тестовый модуль
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
