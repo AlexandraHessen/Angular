@@ -40,6 +40,9 @@ export class HotelComponent {
     return this.photo;
   };
 
+  // отобразит время только один раз при рендере и второй когда сработает setTimeout для картинки
+  // включится дефолтная change detection stretegy и все данные будут проверены
+  // не выводит каждый раз время потому что нет тригера для запука и рендера Angular нет ни таймера,  ни события
   // getTime():string {
   //   return (new Date()).toString();
   // };
