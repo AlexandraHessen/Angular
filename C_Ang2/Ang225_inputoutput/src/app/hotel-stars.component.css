@@ -2,7 +2,7 @@ div {
     border: solid red 1px;
 }
 
-:host:hover{
+/* :host:hover{
   font-size: 25px;
 }
 
@@ -13,6 +13,6 @@ div {
 
 /deep/ div{
   border: 2px black solid; font-style:italic
-}
+} */
 
 
