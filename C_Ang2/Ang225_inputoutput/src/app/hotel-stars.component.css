@@ -1,3 +1,18 @@
 div {
     border: solid red 1px;
 }
+
+:host:hover{
+  font-size: 25px;
+}
+
+
+:host-context(.PriceList) input{
+  background-color: lightgray;
+}
+
+/deep/ div{
+  border: 2px black solid; font-style:italic
+}
+
+
